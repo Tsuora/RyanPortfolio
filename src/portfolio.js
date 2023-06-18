@@ -20,10 +20,10 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Ryan Cabaruvias",
+  title: "Hello everyone, I'm Ryan",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "A .Net Full Stack Software Developer with experience in building Web and Mobile friendly applications with C#, JavaScript / Reactjs / Nodejs."
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -33,13 +33,13 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  // github: "https://github.com/saadpasta",
+  linkedin: "https://www.linkedin.com/in/ryan-cabaruvias-94060985/",
+  gmail: "ryan.cabaruvias@gmail.com",
+  // gitlab: "https://gitlab.com/saadpasta",
+  // facebook: "https://www.facebook.com/saad.pasta7",
+  // medium: "https://medium.com/@saadpasta",
+  // stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -49,14 +49,14 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "FULL STACK DEVELOPER WITH A PASSION FOR LEARNING NEW TECHNOLOGIES",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Develop ASP.Net Web Applications utilizing MVC"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ Mobile Friendly React Applications with C# Rest APi"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Powershell and SQL Stored Procedures for 3rd party integration"
     )
   ],
 
@@ -64,6 +64,18 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
+    {
+      skillName: "C#",
+      fontAwesomeClassname: "fas fa-code"
+    },
+    {
+      skillName: "ASP.Net",
+      fontAwesomeClassname: "far fa-file-code"
+    },
+    {
+      skillName: "reactjs",
+      fontAwesomeClassname: "fab fa-react"
+    },
     {
       skillName: "html-5",
       fontAwesomeClassname: "fab fa-html5"
@@ -73,24 +85,12 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
       skillName: "JavaScript",
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
       skillName: "nodejs",
       fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
     },
     {
       skillName: "npm",
@@ -101,20 +101,16 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
       skillName: "docker",
       fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "Agile, Kanban",
+      fontAwesomeClassname: "fas fa-sitemap"
+    },
+    {
+      skillName: "Github",
+      fontAwesomeClassname: "fab fa-github"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -126,23 +122,14 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "Cal Poly Pomona",
+      logo: require("./assets/images/cppLogo.png"),
+      subHeader: "Bachelor of Science in Computer Engineering",
+      duration: "Graduation: December 2013",
+      desc: "Minor: Computer Science",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Academic Honors: Dean's List"
       ]
-    },
-    {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
   ]
 };
@@ -154,15 +141,15 @@ const techStack = {
   experience: [
     {
       Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      progressPercentage: "60%" //Insert relative proficiency in percentage
     },
     {
       Stack: "Backend",
-      progressPercentage: "70%"
+      progressPercentage: "75%"
     },
     {
       Stack: "Programming",
-      progressPercentage: "60%"
+      progressPercentage: "75%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -173,30 +160,57 @@ const techStack = {
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
+    // {
+    //   role: "Business Owner",
+    //   company: "GachaDiction",
+    //   companylogo: require("./assets/images/newportLogo.png"),
+    //   date: "March 2023 – Present",
+    //   desc: "Anime Merchandise E-Commerce Store",
+    //   descBullets: [
+    //     "Sole developer that built Class and Camp Scheduling Application in ASP.MVC for Recreation Department to replace paid 3rd party application for employee and public use.",
+    //     "Built Reservation Application in ASP.Net for internal events. Utilized by every department for major city-wide events as well as departmental events year-round.",
+    //     "Used Energov Permiting System REST API to build Asp.Net modules for automating Customer and Business License creation in Energov and Quest application for legacy and new Permits. 99% of legacy records cleaned and imported with all new permits utilizing new automation.",
+    //     "Integrated Munis Enterprise Resource Planning system with Active Directory to automatically sync Employee Data using Powershell and SQL Stored Procedures. 100% of existing employee records updated with all new employees using process when they are set up as new hires.",
+    //     "Performed Data Migration from Informix SQL Server to Microsoft Server as part of a software replacement for old ticketing system."
+    //   ]
+    // },
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "IT Analyst",
+      company: "City of Newport Beach",
+      companylogo: require("./assets/images/newportLogo.png"),
+      date: "May 2015 – November 2022",
+      desc: "ASP.Net Application Developer and IT Support specialist",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Sole developer that built Class and Camp Scheduling Application in ASP.MVC for Recreation Department to replace paid 3rd party application for employee and public use.",
+        "Built Reservation Application in ASP.Net for internal events. Utilized by every department for major city-wide events as well as departmental events year-round.",
+        "Used Energov Permiting System REST API to build Asp.Net modules for automating Customer and Business License creation in Energov and Quest application for legacy and new Permits. 99% of legacy records cleaned and imported with all new permits utilizing new automation.",
+        "Integrated Munis Enterprise Resource Planning system with Active Directory to automatically sync Employee Data using Powershell and SQL Stored Procedures. 100% of existing employee records updated with all new employees using process when they are set up as new hires.",
+        "Performed Data Migration from Informix SQL Server to Microsoft Server as part of a software replacement for old ticketing system."
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
+      role: "Software Developer",
+      company: "Hitachi Consulting",
+      companylogo: require("./assets/images/hitachiLogo.jpg"),
       date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "Java API and Front End Developer",
+      descBullets: [
+        "Developed Customer Intake forms and fixed bugs on existing intake forms through Javascript/HTML.",
+        "Added functionality to Car Configurator APIs using Java, Javascript, HTML, JQuery, and MySQL.",
+        "Managed source code through SVN, CVS version control systems, and deployed version up-dates to server through TeamSite.",
+        "Completed tasks in a Scrum/Kanban style development cycle over sprints."
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Intern and Cyber Security Team Leader",
+      company: "Guiang Corporation",
+      companylogo: require("./assets/images/securityLogo.jpg"),
+      date: "September 2012 – March 2013",
+      desc: "Application Developer and Team Leader",
+      descBullets: [
+        "Coordinated and instructed Cyber Security Team on java projects. Formed 10-week plan for team efficiency and organization.",
+        "Worked in team to develop Java app for PHP injection in Jpg Image"
+      ]
     }
   ]
 };
@@ -212,32 +226,38 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Stand Alone Projects",
+  // subtitle: "Stand Alone Projects",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "Gachadiction",
+      projectDesc: "Demo E-Commerce Site built to test direct sales.",
+      projectBullets: [
+        "Built with React front end and C# Rest API.",
+        "Mobile Friendly utilizing MUI Responsive UI.",
+        "Deployed using Github Actions and Docker",
+        "To view use guest login: guestuser pass: Dem0Pa$$"
+      ],
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "https://gachadiction.fly.dev/"
         }
         //  you can add extra buttons here.
       ]
-    },
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
     }
+    // {
+    //   image: require("./assets/images/nextuLogo.webp"),
+    //   projectName: "Nextu",
+    //   projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    //   footerLink: [
+    //     {
+    //       name: "Visit Website",
+    //       url: "http://nextu.se/"
+    //     }
+    //   ]
+    // }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -300,7 +320,7 @@ const achievementSection = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Blogs Section
@@ -324,7 +344,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,7 +363,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -356,25 +376,25 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  number: "1+949-822-1809",
+  email_address: "ryan.cabaruvias@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,

@@ -4,21 +4,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "colorthief": "^2.3.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.5",
+    "colorthief": "^2.4.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "gh-pages": "^2.1.1",
-    "jest-canvas-mock": "^2.3.1",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "gh-pages": "^5.0.0",
+    "jest-canvas-mock": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-easy-emoji": "^1.8.1",
-    "react-headroom": "^3.0.0",
+    "react-headroom": "^3.2.1",
     "react-lottie": "^1.2.3",
     "react-reveal": "^1.2.2",
     "react-scripts": "^5.0.1",
-    "react-test-renderer": "^16.10.2",
-    "react-twitter-embed": "3.0.3",
-    "sass": "^1.32.8"
+    "react-test-renderer": "^18.2.0",
+    "react-twitter-embed": "4.0.4",
+    "sass": "^1.63.4"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -51,7 +53,7 @@
     ]
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "prettier": "^2.3.1"
+    "dotenv": "^16.3.1",
+    "prettier": "^2.8.8"
   }
 }

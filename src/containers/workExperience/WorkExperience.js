@@ -1,4 +1,5 @@
 import React, {useContext} from "react";
+import {Typography, Grid, Paper, Box, Button} from "@mui/material";
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
 import {workExperiences} from "../../portfolio";
@@ -15,22 +16,26 @@ export default function WorkExperience() {
             <div>
               <h1 className="experience-heading">Experiences</h1>
               <div className="experience-cards-div">
-                {workExperiences.experience.map((card, i) => {
-                  return (
-                    <ExperienceCard
-                      key={i}
-                      isDark={isDark}
-                      cardInfo={{
-                        company: card.company,
-                        desc: card.desc,
-                        date: card.date,
-                        companylogo: card.companylogo,
-                        role: card.role,
-                        descBullets: card.descBullets
-                      }}
-                    />
-                  );
-                })}
+                <Grid container spacing={3}>
+                  {workExperiences.experience.map((card, i) => {
+                    return (
+                      <Grid item sm={12} md={6} lg={4}>
+                        <ExperienceCard
+                          key={i}
+                          isDark={isDark}
+                          cardInfo={{
+                            company: card.company,
+                            desc: card.desc,
+                            date: card.date,
+                            companylogo: card.companylogo,
+                            role: card.role,
+                            descBullets: card.descBullets
+                          }}
+                        />
+                      </Grid>
+                    );
+                  })}
+                </Grid>
               </div>
             </div>
           </div>
