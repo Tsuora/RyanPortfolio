@@ -14,7 +14,7 @@ export default function StartupProject() {
   }
 
   const {isDark} = useContext(StyleContext);
-  if (!bigProjects.display) {
+  if (!bigProjects.display) { 
     return null;
   }
   return (
