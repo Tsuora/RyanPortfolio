@@ -183,7 +183,7 @@ const workExperiences = {
       descBullets: [
         "Sole developer that built Class and Camp Scheduling Application in ASP.MVC for Recreation Department to replace paid 3rd party application for employee and public use.",
         "Built Reservation Application in ASP.Net for internal events. Utilized by every department for major city-wide events as well as departmental events year-round.",
-        "Used Energov Permiting System REST API to build Asp.Net modules for automating Customer and Business License creation in Energov and Quest application for legacy and new Permits. 99% of legacy records cleaned and imported with all new permits utilizing new automation.",
+        "Used Energov Permitting System REST API to build Asp.Net modules for automating Customer and Business License creation in Energov and Quest application for legacy and new Permits. 99% of legacy records cleaned and imported with all new permits utilizing new automation.",
         "Integrated Munis Enterprise Resource Planning system with Active Directory to automatically sync Employee Data using Powershell and SQL Stored Procedures. 100% of existing employee records updated with all new employees using process when they are set up as new hires.",
         "Performed Data Migration from Informix SQL Server to Microsoft Server as part of a software replacement for old ticketing system."
       ]
