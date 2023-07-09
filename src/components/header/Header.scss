@@ -181,3 +181,9 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 486px) {
+  .header .logo {
+    font-size: 1.7rem;
+  }
+}

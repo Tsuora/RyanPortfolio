@@ -10,7 +10,7 @@ export default function WorkExperience() {
   const {isDark} = useContext(StyleContext);
   if (workExperiences.display) {
     return (
-      <div id="experience">
+      <div id="experience" className="experience-container">
         <Fade bottom duration={1000} distance="20px">
           <div className="experience-container" id="workExperience">
             <div>
@@ -19,7 +19,7 @@ export default function WorkExperience() {
                 <Grid container spacing={3}>
                   {workExperiences.experience.map((card, i) => {
                     return (
-                      <Grid item sm={12} md={6} lg={4}>
+                      <Grid item xs={12} sm={12} md={6} lg={4}>
                         <ExperienceCard
                           key={i}
                           isDark={isDark}
