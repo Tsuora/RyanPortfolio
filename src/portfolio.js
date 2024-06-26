@@ -69,6 +69,14 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fas fa-code"
     },
     {
+      skillName: "JavaScript",
+      fontAwesomeClassname: "fab fa-js"
+    },
+    {
+      skillName: "Python",
+      fontAwesomeClassname: "fab fa-python"
+    },
+    {
       skillName: "ASP.Net",
       fontAwesomeClassname: "far fa-file-code"
     },
@@ -83,10 +91,6 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "css3",
       fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
     },
     {
       skillName: "nodejs",
@@ -246,6 +250,17 @@ const bigProjects = {
         }
         //  you can add extra buttons here.
       ]
+    },
+    {
+      // image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "Webscrapers",
+      projectDesc: "Scrapy Spiders designed to efficiently pull data from sites.",
+      projectBullets: [
+        "Built with Python and Scrapy.",
+        "Stores and updates data in an SQLite database to improve scraping efficiency.",
+        "Utilizes Proxies for efficient handling of rotating ip and parameters for calls.",
+        "Deployed using Github",
+      ],
     }
     // {
     //   image: require("./assets/images/nextuLogo.webp"),
