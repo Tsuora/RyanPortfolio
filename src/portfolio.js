@@ -21,19 +21,17 @@ const illustration = {
 
 const greeting = {
   username: "Ryan Cabaruvias",
-  title: "Hello everyone, I'm Ryan",
+  title: "Hello, I'm Ryan",
   subTitle: emoji(
-    "A .Net Full Stack Software Developer with experience in building Web and Mobile friendly applications with C#, JavaScript / Reactjs / Nodejs."
+    "Full-Stack Engineer with 12 years of experience building web applications, APIs, and enterprise systems across e-commerce and municipal environments using ASP.NET Core, React/Redux, Next.js, PostgreSQL, and modern deployment workflows."
   ),
   resumeLink:
-    "https://docs.google.com/document/d/1fIZk1iPLO9GD3zbKy_I3WHG4A7WDOk4D/edit?usp=sharing&ouid=103770961544756556105&rtpof=true&sd=true", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+    "https://docs.google.com/document/d/1fIZk1iPLO9GD3zbKy_I3WHG4A7WDOk4D/edit?usp=sharing&ouid=103770961544756556105&rtpof=true&sd=true",
+  displayGreeting: true
 };
 
-// Social Media Links
-
 const socialMediaLinks = {
-  // github: "https://github.com/saadpasta",
+  github: "https://github.com/Tsuora",
   linkedin: "https://www.linkedin.com/in/ryan-cabaruvias-94060985/",
   gmail: "ryan.cabaruvias@gmail.com",
   // gitlab: "https://gitlab.com/saadpasta",
@@ -49,23 +47,26 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "FULL STACK DEVELOPER WITH A PASSION FOR LEARNING NEW TECHNOLOGIES",
+  subTitle: "FULL-STACK ENGINEER FOCUSED ON MODERN WEB APPLICATIONS, APIs, AND PRODUCTION DELIVERY",
   skills: [
     emoji(
-      "⚡ Develop ASP.Net Web Applications utilizing MVC"
+      "⚡ Build full-stack platforms with ASP.NET Core, React/Redux, Next.js, and PostgreSQL"
     ),
-    emoji("⚡ Mobile Friendly React Applications with C# Rest APi"),
     emoji(
-      "⚡ Powershell and SQL Stored Procedures for 3rd party integration"
+      "⚡ Design REST APIs, authentication flows, Stripe integrations, webhooks, and admin tooling"
+    ),
+    emoji(
+      "⚡ Deploy production applications with Docker, GitHub Actions, Fly.io, and automated testing"
     )
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
       skillName: "C#",
+      fontAwesomeClassname: "fas fa-code"
+    },
+    {
+      skillName: "TypeScript",
       fontAwesomeClassname: "fas fa-code"
     },
     {
@@ -77,47 +78,63 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "ASP.Net",
+      skillName: "ASP.NET Core",
       fontAwesomeClassname: "far fa-file-code"
     },
     {
-      skillName: "reactjs",
+      skillName: "React",
       fontAwesomeClassname: "fab fa-react"
     },
     {
-      skillName: "html-5",
+      skillName: "Next.js",
+      fontAwesomeClassname: "fas fa-globe"
+    },
+    {
+      skillName: "Redux Toolkit",
+      fontAwesomeClassname: "fas fa-layer-group"
+    },
+    {
+      skillName: "HTML5",
       fontAwesomeClassname: "fab fa-html5"
     },
     {
-      skillName: "css3",
+      skillName: "CSS3",
       fontAwesomeClassname: "fab fa-css3-alt"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
+      skillName: "PostgreSQL",
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "docker",
+      skillName: "SQL Server",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "Docker",
       fontAwesomeClassname: "fab fa-docker"
     },
     {
-      skillName: "Agile, Kanban",
-      fontAwesomeClassname: "fas fa-sitemap"
+      skillName: "GitHub Actions",
+      fontAwesomeClassname: "fab fa-github"
     },
     {
-      skillName: "Github",
-      fontAwesomeClassname: "fab fa-github"
+      skillName: "xUnit",
+      fontAwesomeClassname: "fas fa-vial"
+    },
+    {
+      skillName: "Vitest",
+      fontAwesomeClassname: "fas fa-vial"
+    },
+    {
+      skillName: "Playwright",
+      fontAwesomeClassname: "fas fa-vial"
+    },
+    {
+      skillName: "Stripe",
+      fontAwesomeClassname: "fas fa-credit-card"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Education Section
@@ -144,15 +161,15 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "60%" //Insert relative proficiency in percentage
+      Stack: "Frontend",
+      progressPercentage: "80%"
     },
     {
-      Stack: "Backend",
-      progressPercentage: "75%"
+      Stack: "Backend / APIs",
+      progressPercentage: "90%"
     },
     {
-      Stack: "Programming",
+      Stack: "Databases / DevOps / Testing",
       progressPercentage: "75%"
     }
   ],
@@ -162,58 +179,46 @@ const techStack = {
 // Work experience section
 
 const workExperiences = {
-  display: true, //Set it to true to show workExperiences Section
+  display: true,
   experience: [
-    // {
-    //   role: "Business Owner",
-    //   company: "GachaDiction",
-    //   companylogo: require("./assets/images/newportLogo.png"),
-    //   date: "March 2023 – Present",
-    //   desc: "Anime Merchandise E-Commerce Store",
-    //   descBullets: [
-    //     "Sole developer that built Class and Camp Scheduling Application in ASP.MVC for Recreation Department to replace paid 3rd party application for employee and public use.",
-    //     "Built Reservation Application in ASP.Net for internal events. Utilized by every department for major city-wide events as well as departmental events year-round.",
-    //     "Used Energov Permiting System REST API to build Asp.Net modules for automating Customer and Business License creation in Energov and Quest application for legacy and new Permits. 99% of legacy records cleaned and imported with all new permits utilizing new automation.",
-    //     "Integrated Munis Enterprise Resource Planning system with Active Directory to automatically sync Employee Data using Powershell and SQL Stored Procedures. 100% of existing employee records updated with all new employees using process when they are set up as new hires.",
-    //     "Performed Data Migration from Informix SQL Server to Microsoft Server as part of a software replacement for old ticketing system."
-    //   ]
-    // },
     {
-      role: "IT Analyst",
-      company: "City of Newport Beach",
-      companylogo: require("./assets/images/newportLogo.png"),
-      date: "May 2015 – November 2022",
-      desc: "ASP.Net Application Developer and IT Support specialist",
+      role: "Full-Stack Engineer",
+      company: "NeoDX",
+      companylogo: require("./assets/images/neodxLogo.png"), // update path if needed
+      date: "2024 – Present",
+      desc: "Production e-commerce platform for dental milling and design",
       descBullets: [
-        "Sole developer that built Class and Camp Scheduling Application in ASP.MVC for Recreation Department to replace paid 3rd party application for employee and public use.",
-        "Built Reservation Application in ASP.Net for internal events. Utilized by every department for major city-wide events as well as departmental events year-round.",
-        "Used Energov Permitting System REST API to build Asp.Net modules for automating Customer and Business License creation in Energov and Quest application for legacy and new Permits. 99% of legacy records cleaned and imported with all new permits utilizing new automation.",
-        "Integrated Munis Enterprise Resource Planning system with Active Directory to automatically sync Employee Data using Powershell and SQL Stored Procedures. 100% of existing employee records updated with all new employees using process when they are set up as new hires.",
-        "Performed Data Migration from Informix SQL Server to Microsoft Server as part of a software replacement for old ticketing system."
+        "Architected and built the company’s first production e-commerce platform using ASP.NET Core, React/Redux, Material UI, and PostgreSQL.",
+        "Designed REST APIs, structured ordering workflows, dynamic intake forms, and internal admin tooling for catalog and order operations.",
+        "Implemented Stripe Connect payment flows, webhook handling, and order status workflows for platform-based payment processing.",
+        "Deployed a Next.js storefront integrated with the .NET API to improve SEO, crawlability, and public-site discoverability.",
+        "Established automated testing with xUnit, Vitest, React Testing Library, and Playwright, and deployed through Docker and GitHub Actions."
       ]
     },
     {
       role: "Software Developer",
-      company: "Hitachi Consulting",
-      companylogo: require("./assets/images/hitachiLogo.jpg"),
-      date: "May 2017 – May 2018",
-      desc: "Java API and Front End Developer",
+      company: "Gachadiction",
+      companylogo: require("./assets/images/gachadictionLogo.png"), // update path if needed
+      date: "2022 – 2025",
+      desc: "Direct-to-consumer e-commerce platform and internal tooling",
       descBullets: [
-        "Developed Customer Intake forms and fixed bugs on existing intake forms through Javascript/HTML.",
-        "Added functionality to Car Configurator APIs using Java, Javascript, HTML, JQuery, and MySQL.",
-        "Managed source code through SVN, CVS version control systems, and deployed version up-dates to server through TeamSite.",
-        "Completed tasks in a Scrum/Kanban style development cycle over sprints."
+        "Designed and deployed a responsive e-commerce platform using a React frontend and C# REST API backend.",
+        "Built Python scraping pipelines monitoring 500,000+ products and automating large-scale product ingestion into PostgreSQL databases.",
+        "Developed internal tools to support product research and streamline sourcing operations."
       ]
     },
     {
-      role: "Intern and Cyber Security Team Leader",
-      company: "Guiang Corporation",
-      companylogo: require("./assets/images/securityLogo.jpg"),
-      date: "September 2012 – March 2013",
-      desc: "Application Developer and Team Leader",
+      role: "IT Applications Analyst",
+      company: "City of Newport Beach",
+      companylogo: require("./assets/images/newportLogo.png"),
+      date: "2015 – 2022",
+      desc: "Municipal application development, integrations, reporting, and enterprise support",
       descBullets: [
-        "Coordinated and instructed Cyber Security Team on java projects. Formed 10-week plan for team efficiency and organization.",
-        "Worked in team to develop Java app for PHP injection in Jpg Image"
+        "Developed ASP.NET reservation and scheduling applications used city-wide for internal events and recreation programs.",
+        "Built EnerGov permitting integrations and ASP.NET modules to automate customer and business license workflows.",
+        "Migrated legacy enterprise data into SQL Server and cleaned/imported 99% of records during replacement of a legacy ticketing system.",
+        "Implemented employee synchronization between Munis ERP and Active Directory using PowerShell and SQL stored procedures.",
+        "Produced SSRS, Crystal Reports, and Excel reporting while supporting ERP, library, and custom application operations across departments."
       ]
     }
   ]
@@ -231,50 +236,29 @@ const openSource = {
 
 const bigProjects = {
   title: "Stand Alone Projects",
-  // subtitle: "Stand Alone Projects",
   projects: [
     {
-      // image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Gachadiction",
-      projectDesc: "Demo E-Commerce Site built to test direct sales.",
+      projectName: "Webscrapers",
+      projectDesc: "Scrapy spiders and ingestion tooling for large-scale product monitoring.",
       projectBullets: [
-        "Built with React front end and C# Rest API.",
-        "Mobile Friendly utilizing MUI Responsive UI.",
-        "Deployed using Github Actions and Docker",
-        "To view use guest login: guestuser pass: Dem0Pa$$"
-      ],
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "https://gachadiction.fly.dev/"
-        }
-        //  you can add extra buttons here.
+        "Built with Python and Scrapy.",
+        "Designed to collect, normalize, and update large product datasets efficiently.",
+        "Stores and updates data in a database to improve scraping efficiency and downstream processing.",
+        "Supports proxy usage and parameterized calls for more reliable scraping workflows."
       ]
     },
     {
-      // image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Webscrapers",
-      projectDesc: "Scrapy Spiders designed to efficiently pull data from sites.",
+      projectName: "Community Data Lookup Bot",
+      projectDesc: "Bot and data tooling for community lookup and automation workflows.",
       projectBullets: [
-        "Built with Python and Scrapy.",
-        "Stores and updates data in an SQLite database to improve scraping efficiency.",
-        "Utilizes Proxies for efficient handling of rotating ip and parameters for calls.",
-        "Deployed using Github",
-      ],
+        "Built with Node.js and PostgreSQL.",
+        "Rebuilt and expanded a community bot originally developed by another maintainer.",
+        "Maintained and updated records as new game content released.",
+        "Used across multiple Discord communities."
+      ]
     }
-    // {
-    //   image: require("./assets/images/nextuLogo.webp"),
-    //   projectName: "Nextu",
-    //   projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    //   footerLink: [
-    //     {
-    //       name: "Visit Website",
-    //       url: "http://nextu.se/"
-    //     }
-    //   ]
-    // }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
 
 // Achievement Section
@@ -398,7 +382,7 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "1+949-822-1809",
+  // number: "1-xxx-xxx-xxxx",
   email_address: "ryan.cabaruvias@gmail.com"
 };
 
