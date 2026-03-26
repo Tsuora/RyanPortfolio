@@ -20,7 +20,15 @@
   overflow: hidden;
 }
 .skill {
-  line-height: 3.5vw;
+  margin-bottom: 1.5rem;
+}
+.skill:last-child {
+  margin-bottom: 0;
+}
+.skill p {
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 .skill-bars {
   font-size: 28px;
@@ -47,7 +55,7 @@
 
 @media (max-width: 1456px) {
   .skills-bar {
-    line-height: 4rem;
+    line-height: normal;
   }
   .skills-image {
     display: none;
@@ -60,8 +68,11 @@
     flex-direction: column;
   }
   .skills-bar {
-    line-height: 3rem;
+    line-height: normal;
     margin: 20px;
+  }
+  .skill p {
+    line-height: 1.5;
   }
   .skills-image {
     display: none;
