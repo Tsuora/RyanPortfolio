@@ -185,7 +185,7 @@ const workExperiences = {
       role: "Full-Stack Engineer",
       company: "NeoDX",
       companylogo: require("./assets/images/neodxLogo.png"), // update path if needed
-      date: "2024 – Present",
+      date: "November 2024 – Present",
       desc: "Production e-commerce platform for dental milling and design",
       descBullets: [
         "Architected and built the company’s first production e-commerce platform using ASP.NET Core, React/Redux, Material UI, and PostgreSQL.",
@@ -199,7 +199,7 @@ const workExperiences = {
       role: "Software Developer",
       company: "Gachadiction",
       companylogo: require("./assets/images/gachadictionLogo.png"), // update path if needed
-      date: "2022 – 2025",
+      date: "November 2022 – November 2024",
       desc: "Direct-to-consumer e-commerce platform and internal tooling",
       descBullets: [
         "Designed and deployed a responsive e-commerce platform using a React frontend and C# REST API backend.",
@@ -211,7 +211,7 @@ const workExperiences = {
       role: "IT Applications Analyst",
       company: "City of Newport Beach",
       companylogo: require("./assets/images/newportLogo.png"),
-      date: "2015 – 2022",
+      date: "May 2015 – November 2022",
       desc: "Municipal application development, integrations, reporting, and enterprise support",
       descBullets: [
         "Developed ASP.NET reservation and scheduling applications used city-wide for internal events and recreation programs.",
