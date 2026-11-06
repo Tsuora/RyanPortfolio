@@ -28,16 +28,6 @@
 }
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.project-card-dark {
-  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.25s ease;
 }
 
 .project-detail {
@@ -48,12 +38,6 @@
   text-align: left;
 }
 
-.project-card-light:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
-}
-.project-card-dark:hover {
-  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
-}
 .project-image {
   position: relative;
   height: 250px;
@@ -65,11 +49,11 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem 1rem;
 }
 
-.project-card-footer span.project-tag {
+.project-card-footer a.project-tag {
   background: $buttonColor;
   color: $lightBackground3;
   vertical-align: middle;
@@ -88,6 +72,9 @@
 }
 
 @media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .project-subtitle {
     font-size: 16px;
     text-align: center;
@@ -96,4 +83,32 @@
   .project-bulletpoints {
     font-size: 1rem;
   }
+}
+
+.project-card {
+  justify-content: flex-start;
+}
+.project-card-dark {
+  background: #1d2533;
+  box-shadow: none;
+  border-color: #344252;
+}
+.project-detail {
+  text-align: left;
+}
+.project-bulletpoints {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+.project-bulletpoints li + li {
+  margin-top: 0.65rem;
+}
+.project-bulletpoints .subTitle {
+  color: #555e68;
+}
+.project-card-dark .card-subtitle {
+  color: #c2cad6;
+}
+.project-card-dark .card-title {
+  color: $textColorDark;
 }

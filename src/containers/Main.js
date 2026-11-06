@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
+import EnterpriseHighlights from "./enterpriseHighlights/EnterpriseHighlights";
 import StackProgress from "./skillProgress/skillProgress";
 import WorkExperience from "./workExperience/WorkExperience";
 import Projects from "./projects/Projects";
@@ -49,20 +50,26 @@ const Main = () => {
           <SplashScreen />
         ) : (
           <>
+            <a className="skip-link" href="#main-content">
+              Skip to content
+            </a>
             <Header />
-            <Greeting />
-            <Skills />
-            <StackProgress />
-            <Education />
-            <WorkExperience />
-            <Projects />
-            <StartupProject />
-            <Achievement />
-            <Blogs />
-            <Talks />
-            <Twitter />
-            <Podcast />
-            <Profile />
+            <main id="main-content">
+              <Greeting />
+              <Skills />
+              <EnterpriseHighlights />
+              <StackProgress />
+              <WorkExperience />
+              <Projects />
+              <StartupProject />
+              <Education />
+              <Achievement />
+              <Blogs />
+              <Talks />
+              <Twitter />
+              <Podcast />
+              <Profile />
+            </main>
             <Footer />
             <ScrollToTopButton />
           </>

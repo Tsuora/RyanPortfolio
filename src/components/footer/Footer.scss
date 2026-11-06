@@ -2,7 +2,12 @@
 
 .footer-text {
   text-align: center;
-  color: $subTitle !important;
+  color: #555e68;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.dark-mode .footer-text {
+  color: #c2cad6;
 }
 
 .dark-mode {

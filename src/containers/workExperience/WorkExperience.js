@@ -1,47 +1,30 @@
-import React, {useContext} from "react";
-import {Typography, Grid, Paper, Box, Button} from "@mui/material";
+import React from "react";
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
 import {workExperiences} from "../../portfolio";
-import {Fade} from "react-reveal";
-import StyleContext from "../../contexts/StyleContext";
 
 export default function WorkExperience() {
-  const {isDark} = useContext(StyleContext);
-  if (workExperiences.display) {
-    return (
-      <div id="experience" className="experience-container">
-        <Fade bottom duration={1000} distance="20px">
-          <div className="experience-container" id="workExperience">
-            <div>
-              <h1 className="experience-heading">Experiences</h1>
-              <div className="experience-cards-div">
-                <Grid container spacing={3}>
-                  {workExperiences.experience.map((card, i) => {
-                    return (
-                      <Grid item xs={12} sm={12} md={6} lg={4}>
-                        <ExperienceCard
-                          key={i}
-                          isDark={isDark}
-                          cardInfo={{
-                            company: card.company,
-                            desc: card.desc,
-                            date: card.date,
-                            companylogo: card.companylogo,
-                            role: card.role,
-                            descBullets: card.descBullets
-                          }}
-                        />
-                      </Grid>
-                    );
-                  })}
-                </Grid>
-              </div>
-            </div>
-          </div>
-        </Fade>
-      </div>
-    );
-  }
-  return null;
+  if (!workExperiences.display) return null;
+  return (
+    <section
+      id="experience"
+      className="main experience-container"
+      aria-labelledby="experience-title"
+    >
+      <p className="section-eyebrow">Enterprise IT & software development</p>
+      <h2 className="section-heading" id="experience-title">
+        Professional Experience
+      </h2>
+      <p className="section-intro">
+        Enterprise application support, systems integration, and software development across municipal government and business environments.
+      </p>
+      <ol className="experience-list">
+        {workExperiences.experience.map(card => (
+          <li key={card.company}>
+            <ExperienceCard cardInfo={card} />
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
 }

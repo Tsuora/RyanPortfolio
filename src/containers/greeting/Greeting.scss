@@ -1,119 +1,124 @@
 @import "../../_globalColor";
 
-.main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 4rem;
-}
+.main,
 .greet-main {
   width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+  max-width: 1220px;
+  padding: 20px 0;
+  margin: 4rem auto 0;
 }
-
+.greet-main {
+  margin-top: 2.5rem;
+}
+.greet-main .greeting-eyebrow {
+  font-size: 1.0625rem;
+}
 .greeting-main {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2.5rem;
 }
-
-.subTitle {
-  color: $subTitle !important;
+.greeting-text {
+  font-size: clamp(2rem, 3.6vw, 3.15rem);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  margin: 0.75rem 0 1.5rem;
 }
-
-.greeting-main {
-  display: flex;
+.greeting-specialization {
+  display: block;
+  font-size: 0.54em;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #247565;
+  margin-top: 0.7rem;
 }
-
-.greeting-main > * {
-  flex: 1;
-  margin-bottom: 30px;
+.dark-mode .greeting-specialization {
+  color: $skillsColor;
+}
+.greeting-text-p,
+.greeting-supporting-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.greeting-supporting-text {
+  color: #555e68;
+}
+.dark-mode .greeting-supporting-text {
+  color: #c2cad6;
+}
+.greeting-experience-actions {
+  --greeting-column-gap: 2rem;
+  max-width: calc(360px + var(--greeting-column-gap));
+  margin: 1.75rem 0 1.25rem;
+}
+.greeting-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--greeting-column-gap);
+}
+.greeting-experience {
+  margin: 0 0 1.75rem;
+  dt {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  dd {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin: 0.25rem 0 0;
+    max-width: 180px;
+  }
 }
 .button-greeting-div {
-  display: flex;
-  margin-top: 20px;
+  margin: 0;
+  .main-button {
+    margin: 0;
+    white-space: nowrap;
+  }
 }
-
-.greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
-  color: $textColor !important;
-}
-
-.greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
-}
-
 .greeting-image-div > img {
   max-width: 100%;
   height: auto;
 }
-
-.wave-emoji {
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
-  display: inline-block;
-  transform-origin: 70% 70%;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-/* Media Query */
-@media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
-  .greeting-text-p {
-    font-size: 20px;
-  }
-}
-@media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
-  }
-  .greeting-text {
-    font-size: 30px;
-    text-align: center;
-  }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
+@media (max-width: 850px) {
   .greeting-main {
-    display: block;
+    grid-template-columns: minmax(0, 1fr);
   }
   .greeting-image-div {
-    height: 256px;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
-
-@media (max-width: 320px) {
+@media (max-width: 600px) {
   .main {
-    width: auto;
+    margin-top: 2.5rem;
+  }
+  .greet-main {
+    margin-top: 1.75rem;
+  }
+  .greet-main .greeting-eyebrow {
+    font-size: 0.9375rem;
+  }
+  .greeting-main {
+    gap: 1rem;
+  }
+  .greeting-experience-actions {
+    --greeting-column-gap: 1.5rem;
+  }
+  .greeting-image-div {
+    display: none;
+  }
+  .greeting-text-p,
+  .greeting-supporting-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 360px) {
+  .button-greeting-div .main-button {
+    font-size: 0.8125rem;
+    padding: 12px;
   }
 }

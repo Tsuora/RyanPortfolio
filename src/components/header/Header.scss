@@ -1,189 +1,96 @@
 @import "../../_globalColor";
 
-/*React-headroom*/
-.headroom-wrapper {
-  max-height: 100px;
+.header {
+  background: $lightBackground1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 5%;
+  box-shadow: 0 1px 0 rgba($buttonColor, 0.12);
 }
-
-/* header */
-
 .dark-menu {
-  background-color: $darkBackground !important;
+  background: $darkBackground;
   color: $textColorDark;
 }
-
-.dark-menu li a {
-  color: $textColorDark !important;
-}
-
-.dark-menu li a:hover {
-  background-color: $buttonColor !important;
-}
-
-.header {
-  background-color: $lightBackground1;
-  max-width: 100%;
-  padding: 15px 20px;
-  margin: 0px auto;
-}
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
-
 .grey-color {
-  color: $subTitle;
+  color: #626b76;
 }
-
-.header li a {
-  display: block;
-  padding: 15px 20px;
-  color: $textColor;
-  text-decoration: none;
+.dark-menu .grey-color {
+  color: #b0bac7;
 }
-
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: $headerHoverBG;
-}
-
 .header .logo {
-  display: block;
   flex: none;
-  float: left;
-  font-size: 1.5em;
+  font-size: 1.65rem;
+  line-height: 1.5;
+  color: #247565;
   text-decoration: none;
-  margin-top: 10px;
-  line-height: normal;
-  color: #359785;
 }
-
 .header .logo-name {
-  font-family: "Agustina Regular";
+  font-family: "Agustina Regular", cursive;
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
-  -webkit-font-variant-ligatures: no-common-ligatures;
-  padding: 0 10px;
+  padding: 0 8px;
 }
-
-/* menu */
-
+.dark-menu .logo {
+  color: $skillsColor;
+}
 .header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
 }
-
-/* menu icon */
-
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .menu-icon .navicon {
-  background: $iconBackground;
+.header .menu a {
   display: block;
-  height: 2px;
-  position: relative;
-  transition: background 0.2s ease-out;
-  width: 18px;
+  padding: 0.75rem 0.65rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 5px;
 }
-
-.header .menu-icon .navicon-dark {
-  background: $textColorDark;
+.header .menu a:hover {
+  background: rgba($buttonColor, 0.13);
 }
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: $iconBackground;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
+.theme-control {
+  padding: 0.5rem 0.75rem;
 }
-
-.header .menu-icon .navicon-dark:before,
-.header .menu-icon .navicon-dark:after {
-  background: $textColorDark !important;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
+.menu-toggle {
   display: none;
+  background: none;
+  color: inherit;
+  border: 1px solid rgba($buttonColor, 0.4);
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 486px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent !important;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-/* 48em = 768px */
-
-@media (min-width: 48em) {
-  .header li {
-    float: left;
+@media (max-width: 1100px) {
+  .menu-toggle {
+    display: block;
   }
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .portfolio-navigation {
+    display: none;
+    flex-basis: 100%;
+  }
+  .portfolio-navigation.is-open {
+    display: block;
   }
   .header .menu {
-    max-height: none;
+    flex-direction: column;
+    align-items: stretch;
   }
-  .header .menu-icon {
-    display: none;
-  }
-}
-@media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
+  .header .menu a {
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 }
-
-@media (max-width: 486px) {
+@media (max-width: 400px) {
   .header .logo {
-    font-size: 1.7rem;
+    font-size: 1.35rem;
   }
 }

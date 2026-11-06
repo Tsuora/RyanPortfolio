@@ -1,31 +1,40 @@
 @import "../../_globalColor";
 
-.dev-icons {
-  padding-left: 0;
+.technical-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.technical-skill-group {
+  padding: 1.75rem;
+  h3 {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 0 0 1.25rem;
+  }
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 0;
+  margin: 0;
   list-style: none;
-  font-size: 3rem;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
+  li {
+    background: rgba($buttonColor, 0.08);
+    border: 1px solid rgba($buttonColor, 0.18);
+    border-radius: 5px;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
 }
-
-.software-skill-inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
+.dark-mode .skill-tags li {
+  background: rgba($buttonColor, 0.12);
+  border-color: rgba($buttonColor, 0.3);
 }
-
-.software-skill-inline > i {
-  color: $subTitle;
-}
-
-.software-skill-inline > i:hover {
-  color: $skillsColor;
-}
-.software-skill-inline > p {
-  color: $subTitle;
-  font-size: 17px;
-}
-.software-skill-inline > i:hover ~ p {
-  color: $skillsColor;
+@media (max-width: 700px) {
+  .technical-skills-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

@@ -2,6 +2,60 @@
 
 .dark-mode {
   background-color: $darkBackground;
-  color: white;
-  transition: "0.1s";
+  color: $textColorDark;
+}
+.section-eyebrow {
+  color: #247565;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+}
+.dark-mode .section-eyebrow {
+  color: $skillsColor;
+}
+.section-heading,
+.skills-heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+  margin: 0 0 1rem;
+}
+.section-intro {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 0 2rem;
+  color: #555e68;
+}
+.dark-mode .section-intro {
+  color: #c2cad6;
+}
+.portfolio-card {
+  border: 1px solid rgba($buttonColor, 0.25);
+  border-radius: 10px;
+  background: $lightBackground2;
+  box-shadow: 0 8px 25px -20px rgba(0, 0, 0, 0.3);
+}
+.dark-mode .portfolio-card {
+  background: #1d2533;
+  border-color: #344252;
+}
+.dark-mode-text {
+  color: $textColorDark !important;
+}
+.skip-link {
+  position: fixed;
+  top: -80px;
+  left: 1rem;
+  z-index: 100;
+  background: $lightBackground1;
+  color: $textColor;
+  padding: 0.8rem 1rem;
+}
+.skip-link:focus {
+  top: 1rem;
 }

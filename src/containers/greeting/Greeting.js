@@ -1,72 +1,58 @@
-import React, {useContext} from "react";
-import {Fade} from "react-reveal";
-import emoji from "react-easy-emoji";
+import React from "react";
 import "./Greeting.scss";
-import landingPerson from "../../assets/lottie/landingPerson";
 import deskCoding from "../../assets/lottie/deskCoding";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-
 import {illustration, greeting} from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
-
-import manOnTable from '../../assets/images/manOnTable.svg';
+import manOnTable from "../../assets/images/manOnTable.svg";
 
 export default function Greeting() {
-  const {isDark} = useContext(StyleContext);
-  if (!greeting.displayGreeting) {
-    return null;
-  }
+  if (!greeting.displayGreeting) return null;
   return (
-    <Fade bottom duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
-        <div className="greeting-main">
-          <div className="greeting-text-div">
-            <div>
-              <h1
-                className={isDark ? "dark-mode greeting-text" : "greeting-text"}
-              >
-                {" "}
-                {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
-              </h1>
-              <p
-                className={
-                  isDark
-                    ? "dark-mode greeting-text-p"
-                    : "greeting-text-p subTitle"
-                }
-              >
-                {greeting.subTitle}
-              </p>
-              <SocialMedia />
-              <div className="button-greeting-div">
-                <Button text="Contact me" href="#contact" />
-                {greeting.resumeLink && (
-                  <Button
-                    text="See my resume"
-                    newTab={true}
-                    href={greeting.resumeLink}
-                  />
-                )}
-              </div>
+    <section
+      className="greet-main"
+      id="greeting"
+      aria-labelledby="greeting-title"
+    >
+      <div className="greeting-main">
+        <div className="greeting-text-div">
+          <p className="section-eyebrow greeting-eyebrow">{greeting.title}</p>
+          <h1 className="greeting-text" id="greeting-title">
+            {greeting.professionalTitle}
+            <span className="greeting-specialization">
+              {" "}
+              {greeting.specialization}
+            </span>
+          </h1>
+          <p className="greeting-text-p">{greeting.subTitle}</p>
+          <p className="greeting-supporting-text">{greeting.supportingText}</p>
+          <div className="greeting-experience-actions">
+            <dl className="greeting-experience greeting-columns">
+              {greeting.experienceSummary.map(item => (
+                <div key={item.value}>
+                  <dt>{item.value}</dt>
+                  <dd>{item.label}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="button-greeting-div greeting-columns">
+              <Button text="Contact me" href="#contact" />
+              {greeting.resumeLink && (
+                <Button text="View resume" newTab href={greeting.resumeLink} />
+              )}
             </div>
           </div>
-          <div className="greeting-image-div">
-            {illustration.animated ? (
-              // <DisplayLottie animationData={landingPerson} />
-              <DisplayLottie animationData={deskCoding}/>
-            ) : (
-              <img
-                alt="man sitting on table"
-                // src={require("../../assets/images/manOnTable.svg")}
-                src={manOnTable}
-              ></img>
-            )}
-          </div>
+          <SocialMedia />
+        </div>
+        <div className="greeting-image-div" aria-hidden="true" inert="">
+          {illustration.animated ? (
+            <DisplayLottie animationData={deskCoding} h={360} />
+          ) : (
+            <img alt="" src={manOnTable} />
+          )}
         </div>
       </div>
-    </Fade>
+    </section>
   );
 }

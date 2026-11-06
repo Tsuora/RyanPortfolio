@@ -8,7 +8,7 @@
 }
 
 /* Fix visible slider checkbox */
-input {
+.switch input {
   transform: scale(0.5);
 }
 
@@ -41,7 +41,8 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: $toggleCheck;
+  outline: 3px solid $buttonColor;
+  outline-offset: 4px;
 }
 
 input:checked + .slider::before,

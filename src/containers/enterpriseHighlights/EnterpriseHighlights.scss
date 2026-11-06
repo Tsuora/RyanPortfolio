@@ -1,0 +1,95 @@
+@import "../../_globalColor";
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.highlight-card {
+  padding: 2rem;
+  display: grid;
+  row-gap: 1.25rem;
+  align-content: start;
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  h4 {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    font-weight: 700;
+    margin: 0 0 0.25rem;
+  }
+}
+.highlight-row-content {
+  display: flow-root;
+}
+.highlight-card-header {
+  min-height: var(--highlight-header-height, 0px);
+}
+.highlight-business-need {
+  min-height: var(--highlight-business-need-height, 0px);
+}
+.highlight-solution {
+  min-height: var(--highlight-solution-height, 0px);
+}
+.highlight-organization {
+  color: #555e68;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0 0 0.65rem;
+}
+.dark-mode .highlight-organization {
+  color: #c2cad6;
+}
+.highlight-detail {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  p {
+    margin: 0;
+  }
+}
+.highlight-result {
+  min-height: var(--highlight-result-height, 0px);
+  border-left: 3px solid $buttonColor;
+  padding-left: 1rem;
+  .highlight-result-label {
+    color: #247565;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 0.35rem;
+  }
+  strong {
+    color: #247565;
+    font-weight: 600;
+  }
+}
+.highlight-result-statement {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+.dark-mode .highlight-result strong,
+.dark-mode .highlight-result-label {
+  color: $skillsColor;
+}
+.highlight-technologies {
+  min-height: var(--highlight-technologies-height, 0px);
+  h4 {
+    margin-bottom: 0.75rem;
+  }
+}
+@media (max-width: 700px) {
+  .highlights-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .highlight-card {
+    padding: 1.5rem;
+    [data-highlight-row] {
+      min-height: 0;
+    }
+  }
+}

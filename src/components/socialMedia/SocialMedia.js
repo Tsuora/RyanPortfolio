@@ -12,6 +12,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.github}
           className="icon-button github"
+          aria-label="GitHub"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -24,6 +25,7 @@ export default function socialMedia() {
         <a
           href={socialMediaLinks.linkedin}
           className="icon-button linkedin"
+          aria-label="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -36,6 +38,7 @@ export default function socialMedia() {
         <a
           href={`mailto:${socialMediaLinks.gmail}`}
           className="icon-button google"
+          aria-label="Email Ryan"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,11 +1,12 @@
 @import "../../_globalColor";
 
 .main-button {
-  background-color: $buttonColor;
+  background-color: #247565;
   border: solid 1px $buttonColor;
   color: $textColorDark;
   font-weight: 700;
   width: max-content;
+  max-width: 100%;
   padding: 13px 22px;
   margin-right: 50px;
   text-transform: uppercase;

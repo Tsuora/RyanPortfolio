@@ -1,47 +1,7 @@
-.experience-cards-div {
+.experience-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1rem 1rem;
-}
-
-.experience-heading {
-  font-size: 56px;
-  font-weight: 400;
-}
-
-.experience-container {
-  display: flex;
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
-}
-
-.experience-container > * {
-  flex: 1;
-}
-
-/* Media Query */
-
-@media (max-width: 1380px) {
-  .experience-heading {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .experience-heading {
-    font-size: 30px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .experience-heading {
-    font-size: 20px;
-  }
-
-  .experience-cards-div {
-    font-size: 15px;
-  }
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

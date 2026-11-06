@@ -1,30 +1,27 @@
-/* Change this file to get your personal Portfolio */
-
-// To change portfolio colors globally go to the  _globalColor.scss file
-
-import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-
-// Splash Screen
+// Portfolio content. Theme colors live in _globalColor.scss.
+import splashAnimation from "./assets/lottie/splashAnimation";
 
 const splashScreen = {
-  enabled: true, // set false to disable splash screen
+  enabled: false,
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 2000
 };
 
-// Summary And Greeting Section
-
-const illustration = {
-  animated: true // Set to false to use static SVG
-};
+const illustration = {animated: true};
 
 const greeting = {
   username: "Ryan Cabaruvias",
   title: "Hello, I'm Ryan",
-  subTitle: emoji(
-    "Full-Stack Engineer with 12 years of experience building web applications, APIs, and enterprise systems across e-commerce and municipal environments using ASP.NET Core, React/Redux, Next.js, PostgreSQL, and modern deployment workflows."
-  ),
+  professionalTitle: "IT Applications Analyst",
+  specialization: "Enterprise Systems & Integration",
+  subTitle:
+    "IT Applications Analyst with 12 years of combined IT and software development experience, including 7+ years supporting municipal enterprise systems. Experienced in production troubleshooting, application administration, ERP support, systems integration, vendor coordination, and workflow automation.",
+  supportingText:
+    "Additional experience developing, maintaining, and deploying business applications using C#/.NET, React, SQL, PowerShell, and modern web technologies.",
+  experienceSummary: [
+    {value: "12 years", label: "Combined IT & development experience"},
+    {value: "7+ years", label: "Municipal enterprise systems"}
+  ],
   resumeLink:
     "https://docs.google.com/document/d/1fIZk1iPLO9GD3zbKy_I3WHG4A7WDOk4D/edit?usp=sharing&ouid=103770961544756556105&rtpof=true&sd=true",
   displayGreeting: true
@@ -34,149 +31,187 @@ const socialMediaLinks = {
   github: "https://github.com/Tsuora",
   linkedin: "https://www.linkedin.com/in/ryan-cabaruvias-94060985/",
   gmail: "ryan.cabaruvias@gmail.com",
-  // gitlab: "https://gitlab.com/saadpasta",
-  // facebook: "https://www.facebook.com/saad.pasta7",
-  // medium: "https://medium.com/@saadpasta",
-  // stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
-  display: true // Set true to display this section, defaults to false
+  display: true
 };
 
-// Skills Section
-
 const skillsSection = {
-  title: "What I do",
-  subTitle: "FULL-STACK ENGINEER FOCUSED ON MODERN WEB APPLICATIONS, APIs, AND PRODUCTION DELIVERY",
+  title: "What I Do",
+  expertiseTitle: "Core Expertise",
+  subTitle:
+    "ENTERPRISE APPLICATION SUPPORT, SYSTEMS INTEGRATION, AND TECHNICAL PROBLEM-SOLVING",
   skills: [
-    emoji(
-      "⚡ Build full-stack platforms with ASP.NET Core, React/Redux, Next.js, and PostgreSQL"
-    ),
-    emoji(
-      "⚡ Design REST APIs, authentication flows, Stripe integrations, webhooks, and admin tooling"
-    ),
-    emoji(
-      "⚡ Deploy production applications with Docker, GitHub Actions, Fly.io, and automated testing"
-    )
-  ],
-
-  softwareSkills: [
     {
-      skillName: "C#",
-      fontAwesomeClassname: "fas fa-code"
+      title: "Enterprise Application Support",
+      expertise: "SYSTEM RELIABILITY",
+      icon: "fas fa-server",
+      description:
+        "Support business-critical applications, investigate production incidents, administer application access and configurations, and coordinate testing and upgrades."
     },
     {
-      skillName: "TypeScript",
-      fontAwesomeClassname: "fas fa-code"
+      title: "Systems Integration & Automation",
+      expertise: "WORKFLOW EFFICIENCY",
+      icon: "fas fa-network-wired",
+      description:
+        "Connect enterprise systems and improve business workflows using SQL, PowerShell, REST APIs, stored procedures, and custom applications."
     },
     {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      title: "Stakeholder & Vendor Collaboration",
+      expertise: "CROSS-FUNCTIONAL DELIVERY",
+      icon: "fas fa-users",
+      description:
+        "Work with business departments, IT teams, and software vendors to investigate issues, gather requirements, coordinate resolutions, document procedures, and train users."
     },
     {
-      skillName: "Python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "ASP.NET Core",
-      fontAwesomeClassname: "far fa-file-code"
-    },
-    {
-      skillName: "React",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "Next.js",
-      fontAwesomeClassname: "fas fa-globe"
-    },
-    {
-      skillName: "Redux Toolkit",
-      fontAwesomeClassname: "fas fa-layer-group"
-    },
-    {
-      skillName: "HTML5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "CSS3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "PostgreSQL",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "SQL Server",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "Docker",
-      fontAwesomeClassname: "fab fa-docker"
-    },
-    {
-      skillName: "GitHub Actions",
-      fontAwesomeClassname: "fab fa-github"
-    },
-    {
-      skillName: "xUnit",
-      fontAwesomeClassname: "fas fa-vial"
-    },
-    {
-      skillName: "Vitest",
-      fontAwesomeClassname: "fas fa-vial"
-    },
-    {
-      skillName: "Playwright",
-      fontAwesomeClassname: "fas fa-vial"
-    },
-    {
-      skillName: "Stripe",
-      fontAwesomeClassname: "fas fa-credit-card"
+      title: "Application Development & Maintenance",
+      expertise: "TECHNICAL IMPLEMENTATION",
+      icon: "fas fa-code",
+      description:
+        "Develop, enhance, test, deploy, and maintain business applications using C#/.NET, React, SQL Server, PostgreSQL, and related technologies."
     }
   ],
   display: true
 };
 
-// Education Section
-
-const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
-  schools: [
+const enterpriseHighlights = {
+  title: "Enterprise IT & Technical Highlights",
+  subtitle:
+    "Selected accomplishments in enterprise application support, systems integration, automation, and business application development.",
+  highlights: [
     {
-      schoolName: "Cal Poly Pomona",
-      logo: require("./assets/images/cppLogo.png"),
-      subHeader: "Bachelor of Science in Computer Engineering",
-      duration: "Graduation: December 2013",
-      desc: "Minor: Computer Science",
-      descBullets: [
-        "Academic Honors: Dean's List"
+      title: "Munis ERP / Active Directory Automation",
+      organization: "City of Newport Beach",
+      businessNeed:
+        "Keep employee information synchronized between Munis ERP and Active Directory.",
+      solution:
+        "Implemented automated synchronization using PowerShell, SQL stored procedures, and SQL Server Agent.",
+      result: {
+        prefix: "Accurately synchronized ",
+        emphasis: "100%",
+        suffix: " of employee records."
+      },
+      skills: ["Munis ERP", "Active Directory", "SQL Server", "PowerShell"]
+    },
+    {
+      title: "Enterprise Application Support & Incident Resolution",
+      organization: "City of Newport Beach",
+      businessNeed:
+        "Maintain reliable operation of business-critical applications supporting municipal departments.",
+      solution:
+        "Investigated production incidents, resolved access and configuration issues, coordinated vendor support, and documented recurring solutions.",
+      result: {
+        prefix: "Consistently resolved ",
+        emphasis: "the most tickets",
+        suffix: " within the IT Applications division."
+      },
+      skills: [
+        "Application Support",
+        "SysAid",
+        "Vendor Coordination"
       ]
-    }
-  ]
-};
-
-// Your top 3 proficient stacks/tech experience
-
-const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
-  experience: [
-    {
-      Stack: "Frontend",
-      progressPercentage: "80%"
     },
     {
-      Stack: "Backend / APIs",
-      progressPercentage: "90%"
+      title: "NeoDX Business Application Platform",
+      organization: "NeoDX",
+      businessNeed:
+        "Provide a digital ordering system to support dental milling operations and streamline order management.",
+      solution:
+        "Gathered business requirements and developed a production e-commerce platform with configurable order intake, role-based access, internal administration tools, Stripe Connect payments, and automated order updates.",
+      result: {
+        prefix: "Delivered an ",
+        emphasis: "integrated production ordering platform",
+        suffix: " supporting order intake, administration, and payments."
+      },
+      skills: ["ASP.NET Core", "React/Next.js", "PostgreSQL", "Stripe Connect"]
     },
     {
-      Stack: "Databases / DevOps / Testing",
-      progressPercentage: "75%"
+      title: "E-Commerce Data Automation",
+      organization: "Gachadiction",
+      businessNeed:
+        "Efficiently monitor large product datasets and support e-commerce sourcing operations.",
+      solution:
+        "Developed Python scraping and ingestion pipelines to collect and process product information, store structured data in PostgreSQL, and support internal business workflows.",
+      result: {
+        prefix: "Automated data collection and monitoring for ",
+        emphasis: "500,000+ products",
+        suffix: "."
+      },
+      skills: ["Python", "PostgreSQL", "Data Ingestion", "Automation"]
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  display: true
 };
 
-// Work experience section
+// Categorized experience replaces subjective proficiency percentages.
+const techStack = {
+  title: "Technical Skills",
+  subtitle:
+    "Technical experience spanning enterprise application support, systems integration, database management, workflow automation, and software development.",
+  experience: [
+    {
+      Stack: "Enterprise Applications & IT Operations",
+      skills: [
+        "Munis ERP",
+        "Symphony Integrated Library System",
+        "Bibliotheca",
+        "Laserfiche",
+        "EnerGov",
+        "Application Administration",
+        "Incident Troubleshooting",
+        "Application Security & Access Management",
+        "Application Upgrades",
+        "User Acceptance Testing",
+        "Vendor Coordination",
+        "Requirements Gathering",
+        "Technical Documentation",
+        "User Training"
+      ]
+    },
+    {
+      Stack: "Systems Integration & Databases",
+      skills: [
+        "SQL Server / T-SQL",
+        "PostgreSQL",
+        "Oracle Database",
+        "PowerShell",
+        "SQL Server Agent",
+        "Stored Procedures",
+        "REST APIs",
+        "Active Directory Integration",
+        "Data Migration",
+        "Workflow Automation",
+        "SSRS",
+        "Crystal Reports"
+      ]
+    },
+    {
+      Stack: "Software Development",
+      skills: [
+        "C# / .NET / ASP.NET Core",
+        "JavaScript / TypeScript",
+        "React / Next.js",
+        "Python",
+        "HTML / CSS",
+        "Java",
+        "ASP.NET MVC"
+      ]
+    },
+    {
+      Stack: "Technical Tools & Deployment",
+      skills: [
+        "Git / GitHub",
+        "GitHub Projects",
+        "Docker",
+        "GitHub Actions",
+        "SysAid",
+        "Jira",
+        "Visual Studio / VS Code",
+        "xUnit / Vitest / Playwright",
+        "SVN / TeamSite"
+      ]
+    }
+  ],
+  display: true
+};
 
 const workExperiences = {
   display: true,
@@ -184,27 +219,27 @@ const workExperiences = {
     {
       role: "Full-Stack Engineer",
       company: "NeoDX",
-      companylogo: require("./assets/images/neodxLogo.png"), // update path if needed
+      companylogo: require("./assets/images/neodxLogoOld.png"),
       date: "November 2024 – Present",
-      desc: "Production e-commerce platform for dental milling and design",
       descBullets: [
-        "Architected and built the company’s first production e-commerce platform using ASP.NET Core, React/Redux, Material UI, and PostgreSQL.",
-        "Designed REST APIs, structured ordering workflows, dynamic intake forms, and internal admin tooling for catalog and order operations.",
-        "Implemented Stripe Connect payment flows, webhook handling, and order status workflows for platform-based payment processing.",
-        "Deployed a Next.js storefront integrated with the .NET API to improve SEO, crawlability, and public-site discoverability.",
-        "Established automated testing with xUnit, Vitest, React Testing Library, and Playwright, and deployed through Docker and GitHub Actions."
+        "Gather requirements directly from business owners, translate operational workflows into application features, present updates, and train users.",
+        "Develop and maintain an e-commerce platform using ASP.NET Core, React/Next.js, and PostgreSQL, including configurable ordering workflows, REST APIs, and administrative and order management tools.",
+        "Implement role-based access controls governing application functionality and order access.",
+        "Track tasks, enhancements, and feature requests using GitHub Projects.",
+        "Integrate Stripe Connect payments and webhook-driven order processing.",
+        "Implement application security improvements, testing, and production deployments using Docker and GitHub Actions."
       ]
     },
     {
       role: "Software Developer",
       company: "Gachadiction",
-      companylogo: require("./assets/images/gachadictionLogo.png"), // update path if needed
+      companylogo: require("./assets/images/gachadictionLogo.png"),
+      logoVariant: "padded",
       date: "November 2022 – November 2024",
-      desc: "Direct-to-consumer e-commerce platform and internal tooling",
       descBullets: [
-        "Designed and deployed a responsive e-commerce platform using a React frontend and C# REST API backend.",
-        "Built Python scraping pipelines monitoring 500,000+ products and automating large-scale product ingestion into PostgreSQL databases.",
-        "Developed internal tools to support product research and streamline sourcing operations."
+        "Designed and deployed an e-commerce application using React and a C# REST API backend.",
+        "Developed Python web-scraping and ingestion pipelines monitoring 500,000+ products, storing and processing large datasets in PostgreSQL.",
+        "Created internal automation and application tools to support business operations, independently solving application and data integration problems."
       ]
     },
     {
@@ -212,188 +247,108 @@ const workExperiences = {
       company: "City of Newport Beach",
       companylogo: require("./assets/images/newportLogo.png"),
       date: "May 2015 – November 2022",
-      desc: "Municipal application development, integrations, reporting, and enterprise support",
       descBullets: [
-        "Developed ASP.NET reservation and scheduling applications used city-wide for internal events and recreation programs.",
-        "Built EnerGov permitting integrations and ASP.NET modules to automate customer and business license workflows.",
-        "Migrated legacy enterprise data into SQL Server and cleaned/imported 99% of records during replacement of a legacy ticketing system.",
-        "Implemented employee synchronization between Munis ERP and Active Directory using PowerShell and SQL stored procedures.",
-        "Produced SSRS, Crystal Reports, and Excel reporting while supporting ERP, library, and custom application operations across departments."
+        "Supported Munis ERP, Symphony ILS, Bibliotheca, Laserfiche, Quest, and internal business applications; investigated production incidents, configuration errors, and user access issues.",
+        "Consistently resolved the highest number of tickets in the IT Applications division using SysAid and documented recurring solutions in an internal knowledge base.",
+        "Worked with Finance, HR, Library, Recreation, and other departments to gather requirements; coordinated vendor support cases and multi-party troubleshooting with Munis, Symphony, and Bibliotheca.",
+        "Administered Munis ERP security roles, application access, and workflow configurations.",
+        "Led cross-department coordination for a major Munis ERP version upgrade, including stakeholder meetings and preproduction user testing; prepared documentation and independently delivered hands-on ERP training.",
+        "Implemented Munis ERP / Active Directory employee synchronization with PowerShell, SQL stored procedures, and SQL Server Agent, accurately updating 100% of employee records.",
+        "Independently developed, tested, deployed, and maintained an ASP.NET MVC 5 recreation scheduling application replacing a paid system and supporting 500+ classes annually. Maintained Quest and developed EnerGov API integrations automating customer and license creation.",
+        "Configured Laserfiche retention rules for automated document disposition and implemented application security improvements following an external assessment. Tested application changes in nonproduction before manually deploying approved updates.",
+        "Cleaned and migrated 99% of legacy records from Oracle Database to SQL Server during replacement of a municipal ticketing system."
+      ]
+    },
+    {
+      role: "Software Developer",
+      company: "Hitachi Consulting – Toyota Motor Sales",
+      companylogo: require("./assets/images/hitachiLogo.png"),
+      logoVariant: "round",
+      date: "March 2014 – April 2015",
+      descBullets: [
+        "Developed frontend administrative tools using JavaScript, HTML, and jQuery.",
+        "Enhanced APIs supporting a vehicle configurator using Java, JavaScript, and MySQL.",
+        "Used SVN and TeamSite for source control and deployments, and participated in Agile Scrum development with multiple engineering teams."
       ]
     }
   ]
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
-
-const openSource = {
-  showGithubProfile: "false", // Set true or false to show Contact profile using Github, defaults to true
-  display: false // Set false to hide this section, defaults to true
-};
-
-// Some big projects you have worked on
-
 const bigProjects = {
-  title: "Stand Alone Projects",
+  title: "Technical Projects & Automation",
+  subtitle:
+    "Additional technical work in data ingestion, database integration, and maintaining operational tools.",
   projects: [
     {
       projectName: "Webscrapers",
-      projectDesc: "Scrapy spiders and ingestion tooling for large-scale product monitoring.",
+      projectDesc:
+        "Python and Scrapy ingestion tools for large-scale product monitoring and database updates.",
       projectBullets: [
-        "Built with Python and Scrapy.",
-        "Designed to collect, normalize, and update large product datasets efficiently.",
-        "Stores and updates data in a database to improve scraping efficiency and downstream processing.",
-        "Supports proxy usage and parameterized calls for more reliable scraping workflows."
+        "Collect, normalize, and update large product datasets for downstream processing.",
+        "Store and update records in a database to improve scraping efficiency and support data workflows.",
+        "Support proxies and parameterized calls for more reliable scraping workflows."
       ]
     },
     {
-      projectName: "Community Data Lookup Bot",
-      projectDesc: "Bot and data tooling for community lookup and automation workflows.",
+      projectName: "Discord Data Lookup Bot",
+      projectDesc:
+        "A Node.js and PostgreSQL chat bot supporting data lookup and role assignment across multiple Discord communities.",
       projectBullets: [
-        "Built with Node.js and PostgreSQL.",
         "Rebuilt and expanded a community bot originally developed by another maintainer.",
-        "Maintained and updated records as new game content released.",
-        "Used across multiple Discord communities."
+        "Integrated PostgreSQL records with community lookup functionality.",
+        "Maintained the application and updated records as new game content was released."
       ]
     }
   ],
   display: true
 };
 
-// Achievement Section
-// Include certificates, talks etc
-
-const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
-
-  achievementsCards: [
+const educationInfo = {
+  display: true,
+  schools: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
-      footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
-      ]
-    },
-    {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
+      schoolName: "California State Polytechnic University, Pomona",
+      logo: require("./assets/images/cppLogo.png"),
+      subHeader: "Bachelor of Science in Computer Engineering",
+      duration: "Graduation: December 2013",
+      desc: "Minor in Computer Science",
+      descBullets: ["Dean's List"]
     }
-  ],
-  display: false // Set false to hide this section, defaults to true
-};
-
-// Blogs Section
-
-const blogSection = {
-  title: "Blogs",
-  subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: false // Set false to hide this section, defaults to true
-};
-
-// Talks Sections
-
-const talkSection = {
-  title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: false // Set false to hide this section, defaults to true
-};
-
-// Podcast Section
-
-const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
-  display: false // Set false to hide this section, defaults to true
+  ]
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: "Let's Connect",
   subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  // number: "1-xxx-xxx-xxxx",
+    "Open to opportunities in enterprise application support, application administration, systems integration, and business systems analysis.",
   email_address: "ryan.cabaruvias@gmail.com"
 };
 
-// Twitter Section
-
-const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
+// Keep disabled template exports compatible with their optional components,
+// without retaining third-party accomplishments, articles, or social profiles.
+const openSource = {showGithubProfile: "false", display: false};
+const achievementSection = {
+  title: "Achievements",
+  subtitle: "",
+  achievementsCards: [],
+  display: false
 };
-
-const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const blogSection = {
+  title: "Blogs",
+  subtitle: "",
+  displayMediumBlogs: "false",
+  blogs: [],
+  display: false
+};
+const talkSection = {title: "Talks", subtitle: "", talks: [], display: false};
+const podcastSection = {
+  title: "Podcast",
+  subtitle: "",
+  podcast: [],
+  display: false
+};
+const twitterDetails = {userName: "", display: false};
+const isHireable = true;
 
 export {
   illustration,
@@ -401,6 +356,7 @@ export {
   socialMediaLinks,
   splashScreen,
   skillsSection,
+  enterpriseHighlights,
   educationInfo,
   techStack,
   workExperiences,

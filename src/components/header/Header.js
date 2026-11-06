@@ -1,86 +1,84 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
-  workExperiences,
   skillsSection,
-  openSource,
-  blogSection,
-  talkSection,
-  achievementSection
+  enterpriseHighlights,
+  techStack,
+  workExperiences,
+  bigProjects
 } from "../../portfolio";
 
-function Header() {
+export default function Header() {
   const {isDark} = useContext(StyleContext);
-  const viewExperience = workExperiences.display;
-  const viewOpenSource = openSource.display;
-  const viewSkills = skillsSection.display;
-  const viewAchievement = achievementSection.display;
-  const viewBlog = blogSection.display;
-  const viewTalks = talkSection.display;
-
+  const [menuOpen, setMenuOpen] = useState(false);
+  const links = [
+    {href: "#capabilities", text: "What I Do", display: skillsSection.display},
+    {
+      href: "#highlights",
+      text: "Highlights",
+      display: enterpriseHighlights.display
+    },
+    {href: "#skills", text: "Skills", display: techStack.display},
+    {href: "#experience", text: "Experience", display: workExperiences.display},
+    {href: "#projects", text: "Projects", display: bigProjects.display},
+    {href: "#contact", text: "Contact", display: true}
+  ];
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo">
-          <span className="grey-color"> &lt;</span>
-          <span className="logo-name">{greeting.username}</span>
-          <span className="grey-color">/&gt;</span>
-        </a>
-        <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label
-          className="menu-icon"
-          htmlFor="menu-btn"
-          style={{color: "white"}}
+        <a
+          href="#greeting"
+          className="logo"
+          aria-label={`${greeting.username}, home`}
         >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
-        </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewSkills && (
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-          )}
-          {viewExperience && (
-            <li>
-              <a href="#experience">Work Experiences</a>
-            </li>
-          )}
-          {viewOpenSource && (
-            <li>
-              <a href="#opensource">Open Source</a>
-            </li>
-          )}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements">Achievements</a>
-            </li>
-          )}
-          {viewBlog && (
-            <li>
-              <a href="#blogs">Blogs</a>
-            </li>
-          )}
-          {viewTalks && (
-            <li>
-              <a href="#talks">Talks</a>
-            </li>
-          )}
-          <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
+          <span className="grey-color" aria-hidden="true">
+            &lt;
+          </span>
+          <span className="logo-name">{greeting.username}</span>
+          <span className="grey-color" aria-hidden="true">
+            /&gt;
+          </span>
+        </a>
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-expanded={menuOpen}
+          aria-controls="portfolio-navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span aria-hidden="true">{menuOpen ? "✕" : "☰"}</span>
+          <span className="sr-only">Toggle navigation</span>
+        </button>
+        <nav
+          id="portfolio-navigation"
+          className={
+            menuOpen ? "portfolio-navigation is-open" : "portfolio-navigation"
+          }
+          aria-label="Main navigation"
+          onKeyDown={event => {
+            if (event.key === "Escape") setMenuOpen(false);
+          }}
+        >
+          <ul className="menu">
+            {links
+              .filter(link => link.display)
+              .map(link => (
+                <li key={link.href}>
+                  <a href={link.href} onClick={() => setMenuOpen(false)}>
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            <li className="theme-control">
               <ToggleSwitch />
-            </a>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </nav>
       </header>
     </Headroom>
   );
 }
-export default Header;
