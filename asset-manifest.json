@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.19b561b4.css",
-    "main.js": "/static/js/main.83bc5bb8.js",
+    "main.css": "/static/css/main.bc89f9e0.css",
+    "main.js": "/static/js/main.bd7fa881.js",
     "static/css/487.2ec0398e.chunk.css": "/static/css/487.2ec0398e.chunk.css",
     "static/js/487.b0c70c4b.chunk.js": "/static/js/487.b0c70c4b.chunk.js",
     "static/css/990.8ccb9d7e.chunk.css": "/static/css/990.8ccb9d7e.chunk.css",
@@ -17,15 +17,15 @@
     "static/media/neodxLogoOld.png": "/static/media/neodxLogoOld.e92e48df0414ebeccefa.png",
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.19b561b4.css.map": "/static/css/main.19b561b4.css.map",
-    "main.83bc5bb8.js.map": "/static/js/main.83bc5bb8.js.map",
+    "main.bc89f9e0.css.map": "/static/css/main.bc89f9e0.css.map",
+    "main.bd7fa881.js.map": "/static/js/main.bd7fa881.js.map",
     "487.2ec0398e.chunk.css.map": "/static/css/487.2ec0398e.chunk.css.map",
     "487.b0c70c4b.chunk.js.map": "/static/js/487.b0c70c4b.chunk.js.map",
     "990.8ccb9d7e.chunk.css.map": "/static/css/990.8ccb9d7e.chunk.css.map",
     "990.2b3e371f.chunk.js.map": "/static/js/990.2b3e371f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19b561b4.css",
-    "static/js/main.83bc5bb8.js"
+    "static/css/main.bc89f9e0.css",
+    "static/js/main.bd7fa881.js"
   ]
 }
