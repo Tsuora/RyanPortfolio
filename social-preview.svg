@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#171c28" />
+  <path d="M0 0h1200v12H0z" fill="#359785" />
+  <rect x="80" y="80" width="52" height="5" rx="2" fill="#00ddb3" />
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="80" y="145" fill="#00ddb3" font-size="26" letter-spacing="2">RYAN CABARUVIAS</text>
+    <text x="80" y="265" fill="#ffffff" font-size="62" font-weight="700">IT Applications Analyst</text>
+    <text x="80" y="330" fill="#c2cad6" font-size="36">Enterprise Systems &amp; Integration</text>
+    <path d="M80 385h1040" stroke="#344252" stroke-width="2" />
+    <text x="80" y="448" fill="#ffffff" font-size="27">7+ years supporting municipal enterprise systems</text>
+    <text x="80" y="500" fill="#c2cad6" font-size="24">ERP administration · Incident resolution · SQL · PowerShell · APIs</text>
+    <text x="80" y="570" fill="#00ddb3" font-size="22">ryancabaruvias.com</text>
+  </g>
+</svg>

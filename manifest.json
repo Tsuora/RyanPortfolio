@@ -1,6 +1,6 @@
 {
-  "short_name": "RyanPortfolio",
-  "name": "RyanPortfolio",
+  "short_name": "Ryan Cabaruvias",
+  "name": "Ryan Cabaruvias | IT Applications Analyst & Systems Integration",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#6c63ff",
-  "background_color": "#ffffff"
+  "theme_color": "#171c28",
+  "background_color": "#171c28"
 }
