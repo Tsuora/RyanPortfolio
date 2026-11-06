@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -15,6 +15,33 @@ import {
 export default function Header() {
   const {isDark} = useContext(StyleContext);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const toggleRef = useRef(null);
+
+  useEffect(() => {
+    const updateViewport = () => {
+      const mobile = window.innerWidth <= 1100;
+      setIsMobile(mobile);
+      if (!mobile) setMenuOpen(false);
+    };
+    // Switching pin on after mount also fixes restored scroll positions.
+    updateViewport();
+    window.addEventListener("resize", updateViewport);
+    return () => window.removeEventListener("resize", updateViewport);
+  }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = event => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      setMenuOpen(false);
+      toggleRef.current?.focus({preventScroll: true});
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [menuOpen]);
+
   const links = [
     {href: "#capabilities", text: "What I Do", display: skillsSection.display},
     {
@@ -28,12 +55,13 @@ export default function Header() {
     {href: "#contact", text: "Contact", display: true}
   ];
   return (
-    <Headroom>
+    <Headroom pin={isMobile || menuOpen} style={{zIndex: isMobile ? 100 : 1}}>
       <header className={isDark ? "dark-menu header" : "header"}>
         <a
           href="#greeting"
           className="logo"
           aria-label={`${greeting.username}, home`}
+          onClick={() => setMenuOpen(false)}
         >
           <span className="grey-color" aria-hidden="true">
             &lt;
@@ -45,13 +73,16 @@ export default function Header() {
         </a>
         <button
           type="button"
+          ref={toggleRef}
           className="menu-toggle"
           aria-expanded={menuOpen}
           aria-controls="portfolio-navigation"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen(open => !open)}
         >
           <span aria-hidden="true">{menuOpen ? "✕" : "☰"}</span>
-          <span className="sr-only">Toggle navigation</span>
+          <span className="sr-only">
+            {menuOpen ? "Close navigation" : "Open navigation"}
+          </span>
         </button>
         <nav
           id="portfolio-navigation"
@@ -59,9 +90,6 @@ export default function Header() {
             menuOpen ? "portfolio-navigation is-open" : "portfolio-navigation"
           }
           aria-label="Main navigation"
-          onKeyDown={event => {
-            if (event.key === "Escape") setMenuOpen(false);
-          }}
         >
           <ul className="menu">
             {links

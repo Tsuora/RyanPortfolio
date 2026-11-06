@@ -2,6 +2,16 @@
 
 Updated the existing React portfolio in place using the supplied career facts. The established fonts, teal palette, illustrations, dark/light themes, real image assets, and résumé, GitHub, LinkedIn, and email URLs are retained. No dependencies or framework changes were introduced.
 
+## Mobile navigation fix
+
+The disappearing menu was caused by `react-headroom` hiding the entire header during downward scrolling while React still considered the menu open. The expanded menu also increased the header placeholder height and shifted the page. A production-browser reproduction confirmed an expanded menu translated completely above the viewport.
+
+At the existing responsive breakpoint (1100px and below), the header now stays pinned. The navigation panel sits directly below the header, above the page, without expanding the header placeholder to the menu's height. Its height follows the available dynamic viewport with a `vh` fallback, safe-area padding, and independent scrolling on short screens. Scrolling and mobile viewport changes leave the menu open; selecting a destination, the logo, the close toggle, or Escape dismisses it. Escape returns focus to the toggle. The button's accessible name follows its state, the skip link stays above the pinned header, and switching to desktop clears the expanded state. Desktop navigation retains its existing layout and Headroom hide/reveal behavior.
+
+Files changed for this fix: `src/components/header/Header.js`, `src/components/header/Header.scss`, new `src/components/header/Header.test.js`, and this report. No portfolio content, assets, dependencies, or unrelated sections changed; preservation hashes match for all 134 unrelated source/public/package files.
+
+Validation: production build, all seven tests in two suites (three existing integration tests plus four header regressions), changed-source ESLint/Prettier, and whitespace checks passed. Production Chrome touch checks covered 320, 375, 390, 430, 768, and 1024px widths at the top, middle, and bottom after upward and downward scrolling, repeated opening/closing, every section destination, and scrolling while expanded. Additional checks covered Escape/focus return, keyboard traversal and visible focus, the skip link, theme switching in both themes, independent panel scrolling at 390×280 and 430×240, orientation changes, restored section loads, normal-motion completion, and desktop navigation at 1440px. No JavaScript exceptions, failed requests, or HTTP resource errors were observed. Screenshots were inspected in both themes and at short-screen and desktop sizes. These are Chrome emulation checks, not physical-device or Safari validation. Changes remain local; no deployment was performed.
+
 ## Content and presentation
 
 - The hero leads with “IT Applications Analyst | Enterprise Systems & Integration,” 12 years of combined IT/development experience, and 7+ years supporting municipal enterprise systems. The opening splash is disabled so this appears immediately.
@@ -26,7 +36,7 @@ The latest highlight-card redesign changed `src/portfolio.js`, `src/containers/e
 | Check                                                   | Result                                                                                                                                                                                                        |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `npm run build`                                         | Passed; production output generated in ignored `build/`.                                                                                                                                                      |
-| `CI=true npm test -- --watchAll=false --runInBand`      | Passed: one suite, three integration tests.                                                                                                                                                                   |
+| `CI=true npm test -- --watchAll=false --runInBand`      | Passed: two suites, seven tests (three integration and four header regressions).                                                                                                                              |
 | ESLint on every changed JavaScript file                 | Passed. This repository has no separate lint npm script.                                                                                                                                                      |
 | Prettier check on changed JS, SCSS, CSS, HTML, and JSON | Passed.                                                                                                                                                                                                       |
 | `git diff --check`                                      | Passed.                                                                                                                                                                                                       |
@@ -93,6 +103,7 @@ The subsequent logo standardization changed only `src/components/experienceCard/
 - `src/components/footer/Footer.scss`
 - `src/components/header/Header.js`
 - `src/components/header/Header.scss`
+- `src/components/header/Header.test.js`
 - `src/components/socialMedia/SocialMedia.js`
 - `src/components/softwareSkills/SoftwareSkill.js`
 - `src/components/softwareSkills/SoftwareSkill.scss`
